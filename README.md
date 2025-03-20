@@ -1,38 +1,59 @@
-# sv
+# Svelte-tRPC-Drizzle-Neon Todo App
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A simple Todo application built with:
 
-## Creating a project
+- [SvelteKit](https://kit.svelte.dev/) - A framework for building web applications
+- [tRPC](https://trpc.io/) - End-to-end typesafe APIs
+- [Drizzle ORM](https://orm.drizzle.team/) - TypeScript ORM
+- [Neon Postgres](https://neon.tech/) - Serverless Postgres database
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
 
-```bash
-# create a new project in the current directory
-npx sv create
+1. Clone this repository:
+   ```
+   git clone <repository-url>
+   cd Svelte-tRPC-Drizzle-Neon
+   ```
 
-# create a new project in my-app
-npx sv create my-app
-```
+2. Install dependencies:
+   ```
+   pnpm install
+   ```
 
-## Developing
+3. Set up your Neon Postgres database:
+   - Create a free account at [neon.tech](https://neon.tech)
+   - Create a new project and database
+   - Copy your connection string
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+4. Update the `.env` file with your database connection string:
+   ```
+   DATABASE_URL="postgres://user:password@your-neon-host/dbname"
+   ```
 
-```bash
-npm run dev
+5. Push the database schema:
+   ```
+   pnpm db:push
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+6. Start the development server:
+   ```
+   pnpm dev
+   ```
 
-## Building
+7. Open your browser and navigate to `http://localhost:5173`
 
-To create a production version of your app:
+## Features
 
-```bash
-npm run build
-```
+- Create, read, and update todos
+- Toggle todo completion status
+- User management
+- End-to-end type safety with tRPC
+- PostgreSQL database with Drizzle ORM
+- Modern UI with Tailwind CSS
 
-You can preview the production build with `npm run preview`.
+## Project Structure
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- `/src/lib/server/db` - Database schema and configuration
+- `/src/lib/server/trpc` - tRPC router and context
+- `/src/lib/components` - Reusable UI components
+- `/src/routes` - SvelteKit routes
