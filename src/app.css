@@ -1,3 +1,27 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@layer base {
+  body {
+    @apply min-h-screen bg-gray-50;
+  }
+  h1 {
+    @apply mb-4 text-3xl font-bold text-gray-800;
+  }
+  h2 {
+    @apply mb-3 text-2xl font-semibold text-gray-700;
+  }
+  button {
+    @apply rounded px-4 py-2 font-medium transition;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+  .container {
+    @apply mx-auto max-w-4xl p-4;
+  }
+}

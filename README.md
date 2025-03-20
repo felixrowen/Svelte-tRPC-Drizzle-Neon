@@ -10,32 +10,38 @@ A simple Todo application built with:
 ## Getting Started
 
 1. Clone this repository:
+
    ```
    git clone <repository-url>
    cd Svelte-tRPC-Drizzle-Neon
    ```
 
 2. Install dependencies:
+
    ```
    pnpm install
    ```
 
 3. Set up your Neon Postgres database:
+
    - Create a free account at [neon.tech](https://neon.tech)
    - Create a new project and database
    - Copy your connection string
 
 4. Update the `.env` file with your database connection string:
+
    ```
    DATABASE_URL="postgres://user:password@your-neon-host/dbname"
    ```
 
 5. Push the database schema:
+
    ```
    pnpm db:push
    ```
 
 6. Start the development server:
+
    ```
    pnpm dev
    ```

@@ -13,4 +13,4 @@ export function trpc(init?: TRPCClientInit) {
     browserClient = client;
   }
   return client;
-} 
+}

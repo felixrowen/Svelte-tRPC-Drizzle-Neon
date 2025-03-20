@@ -11,4 +11,4 @@ export async function createContext(event: RequestEvent): Promise<Context> {
     event,
     db
   };
-} 
+}
