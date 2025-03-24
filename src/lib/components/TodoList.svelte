@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { trpc } from '$lib/trpc/client';
+  import { trpc } from '$lib/server/trpc/client';
   import TodoItem from './TodoItem.svelte';
   import TodoForm from './TodoForm.svelte';
   import { onMount } from 'svelte';

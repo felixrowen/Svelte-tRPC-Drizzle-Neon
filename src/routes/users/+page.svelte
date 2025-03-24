@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { trpc } from '$lib/trpc/client';
+  import { trpc } from '$lib/server/trpc/client';
   import { onMount } from 'svelte';
 
   let users: Array<{
